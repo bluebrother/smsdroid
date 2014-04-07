@@ -96,6 +96,8 @@ public class PreferencesActivity extends PreferenceActivity implements IPreferen
 	private static final String THEME_BLACK = "black";
 	/** Theme: light. */
 	private static final String THEME_LIGHT = "light";
+	/** Preference's name: use tiled layout */
+	private static final String PREFS_USE_GRIDLAYOUT = "use_gridlayout";
 	/** Preference's name: text size. */
 	private static final String PREFS_TEXTSIZE = "textsizen";
 	/** Preference's name: text color. */
@@ -380,6 +382,16 @@ public class PreferencesActivity extends PreferenceActivity implements IPreferen
 		} else {
 			return R.style.Theme_SherlockSMSdroid_Light;
 		}
+	}
+
+	/**
+	 * Get Gridlayout enabled state.
+	 * @param context
+	 * @return gridlayout enabled state.
+	 */
+	static final boolean getGridlayoutEnabled(final Context context) {
+		final SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
+		return p.getBoolean(PREFS_USE_GRIDLAYOUT, false);
 	}
 
 	/**

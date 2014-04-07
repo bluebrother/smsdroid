@@ -266,8 +266,7 @@ public final class ConversationListActivity extends SherlockActivity implements
 
         setTheme(PreferencesActivity.getTheme(this));
         Utils.setLocale(this);
-        if (PreferenceManager.getDefaultSharedPreferences(this)
-                .getBoolean("use_gridlayout", false)) {
+        if (PreferencesActivity.getGridlayoutEnabled(this)) {
             setContentView(R.layout.conversationgrid);
         } else {
             setContentView(R.layout.conversationlist);

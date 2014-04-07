@@ -168,7 +168,7 @@ public class ConversationAdapter extends ResourceCursorAdapter {
         activity = c;
 
         SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(activity);
-        useGridLayout = p.getBoolean("use_gridlayout", false);
+        useGridLayout = PreferencesActivity.getGridlayoutEnabled(activity);
         if (useGridLayout) {
             super.setViewResource(R.layout.conversation_square);
         }
