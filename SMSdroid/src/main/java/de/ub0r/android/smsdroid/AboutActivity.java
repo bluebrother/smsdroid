@@ -36,6 +36,7 @@ public final class AboutActivity extends SherlockActivity {
 	@Override
 	public void onCreate(final Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setTheme(PreferencesActivity.getTheme(this));
 		setContentView(R.layout.about);
 		SMSdroid.fixActionBarBackground(getSupportActionBar(), getResources(),
 				R.drawable.bg_striped, R.drawable.bg_striped_img);
