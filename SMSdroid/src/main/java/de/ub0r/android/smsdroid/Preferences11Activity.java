@@ -41,6 +41,7 @@ public final class Preferences11Activity extends PreferenceActivity
 
     @Override
     public void onCreate(final Bundle savedInstanceState) {
+        setTheme(PreferencesActivity.getTheme(this));
         super.onCreate(savedInstanceState);
         setTitle(R.string.settings);
         Utils.setLocale(this);

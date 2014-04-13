@@ -278,6 +278,7 @@ public class PreferencesActivity extends PreferenceActivity implements IPreferen
 	 */
 	@Override
 	public final void onCreate(final Bundle savedInstanceState) {
+		setTheme(getTheme(this));
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.prefs_appearance_behavior);
 		addPreferencesFromResource(R.xml.prefs_about);
