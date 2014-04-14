@@ -296,7 +296,7 @@ public final class ConversationListActivity extends SherlockActivity implements
             // check if this is the default sms app.
             // If the device doesn't support Telephony.Sms (i.e. tablet) getDefaultSmsPackage() will
             // be null. Use equals() on PACKAGE_NAME to avoid FC in this case.
-            if (BuildConfig.PACKAGE_NAME.equals(Telephony.Sms.getDefaultSmsPackage(this))) {
+            if (!BuildConfig.PACKAGE_NAME.equals(Telephony.Sms.getDefaultSmsPackage(this))) {
                 AlertDialog.Builder b = new AlertDialog.Builder(this);
                 b.setTitle(R.string.not_default_app);
                 b.setMessage(R.string.not_default_app_message);
